@@ -1,0 +1,22 @@
+<section id="skills" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title animate-fade-in-up">Skills & Technologies</h2>
+    <div class="row">
+      <div class="col-12" *ngIf="portfolio$ | async as portfolio">
+        <div *ngFor="let category of getCategories()" class="skill-category mb-5">
+          <h3 class="category-title">{{ category }}</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4" *ngFor="let skill of getSkillsByCategory(category, portfolio.skills)">
+              <div class="skill-card card-custom animate-scale-in">
+                <div class="skill-icon">{{ skill.icon }}</div>
+                <h4 class="skill-name">{{ skill.name }}</h4>
+                <div class="skill-category-badge">{{ skill.category }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

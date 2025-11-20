@@ -1,0 +1,59 @@
+<section id="home" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-content animate-fade-in-up">
+          <div class="hero-greeting">Hello, I'm</div>
+          <h1 class="hero-name">Shoban Babu.K</h1>
+          <h2 class="hero-title">Software Developer</h2>
+          <p class="hero-description">
+            Passionate about creating efficient code and exciting user experiences. 
+            Adaptable Software Engineer ready to support operations from conception through post-release support.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary-custom me-3" (click)="scrollToSection('projects')">
+              View My Work
+            </button>
+            <button class="btn btn-outline-primary-custom" (click)="scrollToSection('contact')">
+              Get In Touch
+            </button>
+          </div>
+          <div class="hero-social mt-4">
+            <a href="mailto:bshoban8@gmail.com" class="social-link" target="_blank">
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a href="tel:7358268360" class="social-link" target="_blank">
+              <i class="bi bi-telephone"></i>
+            </a>
+            <a href="https://linkedin.com" class="social-link" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com" class="social-link" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image animate-scale-in">
+          <div class="image-wrapper">
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+            <div class="profile-placeholder">
+              <i class="bi bi-person-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <a (click)="scrollToSection('about')">
+      <i class="bi bi-chevron-down"></i>
+    </a>
+  </div>
+</section>
+

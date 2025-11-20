@@ -1,0 +1,96 @@
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title animate-fade-in-up">Get In Touch</h2>
+    <div class="row">
+      <div class="col-lg-6" *ngIf="portfolio$ | async as portfolio">
+        <div class="contact-info animate-slide-in-left">
+          <h3>Let's Connect</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Email</h5>
+                <a href="mailto:{{ portfolio.personalInfo.email }}">{{ portfolio.personalInfo.email }}</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Phone</h5>
+                <a href="tel:{{ portfolio.personalInfo.phone }}">{{ portfolio.personalInfo.phone }}</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h5>Location</h5>
+                <p>{{ portfolio.personalInfo.address }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links mt-4">
+            <a href="mailto:bshoban8@gmail.com" class="social-btn" target="_blank">
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a href="tel:7358268360" class="social-btn" target="_blank">
+              <i class="bi bi-telephone"></i>
+            </a>
+            <a href="https://linkedin.com" class="social-btn" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com" class="social-btn" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-form animate-slide-in-right">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="name" 
+                [(ngModel)]="contactForm.name"
+                name="name"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                [(ngModel)]="contactForm.email"
+                name="email"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea 
+                class="form-control" 
+                id="message" 
+                rows="5" 
+                [(ngModel)]="contactForm.message"
+                name="message"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

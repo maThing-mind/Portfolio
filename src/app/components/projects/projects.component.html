@@ -1,0 +1,30 @@
+<section id="projects" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title animate-fade-in-up">Featured Projects</h2>
+    <div class="row" *ngIf="portfolio$ | async as portfolio">
+      <div class="col-lg-6 mb-4" *ngFor="let project of portfolio.projects; let i = index">
+        <div class="project-card card-custom animate-scale-in" [style.animation-delay]="i * 0.2 + 's'">
+          <div class="project-image">
+            <div class="project-icon">{{ project.image }}</div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-features">
+              <h5>Key Features:</h5>
+              <ul>
+                <li *ngFor="let feature of project.features">{{ feature }}</li>
+              </ul>
+            </div>
+            <div class="project-technologies">
+              <span class="tech-badge" *ngFor="let tech of project.technologies">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

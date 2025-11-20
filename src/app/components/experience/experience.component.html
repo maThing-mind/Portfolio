@@ -1,0 +1,28 @@
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title animate-fade-in-up">Work Experience</h2>
+    <div class="row">
+      <div class="col-lg-10 mx-auto" *ngIf="portfolio$ | async as portfolio">
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let exp of portfolio.experience; let i = index">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card-custom animate-slide-in-left" [style.animation-delay]="i * 0.2 + 's'">
+              <div class="timeline-header">
+                <h3 class="company-name">{{ exp.company }}</h3>
+                <span class="timeline-period">{{ exp.period }}</span>
+              </div>
+              <h4 class="position-title">{{ exp.position }}</h4>
+              <p class="location"><i class="bi bi-geo-alt"></i> {{ exp.location }}</p>
+              <ul class="responsibilities">
+                <li *ngFor="let resp of exp.responsibilities">
+                  <i class="bi bi-check-circle"></i> {{ resp }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
