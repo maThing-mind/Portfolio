@@ -30,9 +30,18 @@ export const initialState: PortfolioState = {
     { name: 'MySQL / SSMS / PostgreSQL', category: 'Database', icon: '🗄️' },
     { name: 'MongoDB', category: 'Database', icon: '🍃' },
     { name: 'IIS & Linux Server', category: 'DevOps', icon: '🖥️' },
+    { name:'Apache Server', category: 'DevOps', icon: '🪶' },
+
     { name: 'AWS / Firebase / Docker', category: 'Cloud', icon: '☁️' },
-    { name: 'NgRx / Bloc / Redux', category: 'State Management', icon: '🔄' },
+    { name: 'NgRx', category: 'State Management', icon: '🔄' },
+    { name: 'Bloc', category: 'State Management', icon: '🔄' },
+    { name: 'Redux', category: 'State Management', icon: '🔄' },
+
     { name: 'OOPs Concepts', category: 'Programming', icon: '💻' },
+    { name: 'CQRS Architecture', category: 'Programming', icon: '🔀' },
+    { name: 'MVC Architecture', category: 'Programming', icon: '🧱' },
+
+
     { name: 'Postman & Swagger', category: 'Tools', icon: '🔧' },
     { name: 'Full Stack Development', category: 'General', icon: '🚀' }
   ],
@@ -73,7 +82,7 @@ export const initialState: PortfolioState = {
         'MongoDB database for data storage',
         'Responsive front-end with React.js, HTML, CSS, and JavaScript'
       ],
-      technologies: ['React.js', 'Node.js', 'MongoDB', 'Payment Gateway', 'JavaScript', 'jQuery'],
+      technologies: ['Flutter', 'Node.js', 'MongoDB', 'Payment Gateway', 'JavaScript', 'jQuery'],
       image: '🎬'
     }
   ],
