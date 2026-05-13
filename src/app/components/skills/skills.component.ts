@@ -38,8 +38,17 @@ export class SkillsComponent implements OnInit {
     return Object.keys(this.skillCategories);
   }
 
-  getSkillsByCategory(category: string, skills: any[]): any[] {
-    return skills.filter(skill => skill.category === category);
+  getSkillsByCategory(category: string): any[] {
+    return this.skillCategories[category] || [];
+  }
+
+  getSkillInitials(name: string): string {
+    return name
+      .replace(/[^a-zA-Z0-9\s/.&+-]/g, '')
+      .split(/[\s/&.+-]+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map(part => part[0]?.toUpperCase() || '')
+      .join('');
   }
 }
-

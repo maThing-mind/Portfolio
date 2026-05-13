@@ -21,14 +21,15 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: var(--light-bg);
+  background: var(--surface-muted);
   border-radius: 15px;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .contact-item:hover {
   transform: translateX(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-icon {
@@ -88,15 +89,16 @@
 
 .social-btn:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 20px rgba(37, 99, 235, 0.28);
   color: white;
 }
 
 .contact-form {
-  background: white;
+  background: var(--surface-strong);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
 }
 
 .form-label {
@@ -106,15 +108,23 @@
 }
 
 .form-control {
-  border: 2px solid var(--light-bg);
+  border: 2px solid var(--surface-muted);
   border-radius: 10px;
   padding: 0.75rem 1rem;
+  background: var(--input-bg);
+  color: var(--text-dark);
   transition: all 0.3s ease;
 }
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+  background: var(--input-bg);
+  color: var(--text-dark);
+}
+
+.form-control::placeholder {
+  color: var(--text-light);
 }
 
 @media (max-width: 768px) {
@@ -123,4 +133,3 @@
     padding: 1.5rem;
   }
 }
-

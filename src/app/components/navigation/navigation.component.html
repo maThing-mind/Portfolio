@@ -31,7 +31,18 @@
           <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
         </li>
       </ul>
+      <button
+        type="button"
+        class="theme-toggle ms-lg-3 mt-3 mt-lg-0"
+        (click)="toggleTheme()"
+        [attr.aria-label]="'Switch to ' + (currentTheme === 'light' ? 'dark' : 'light') + ' mode'">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb"></span>
+        </span>
+        <span class="theme-toggle-label">{{ currentTheme === 'light' ? 'Dark mode' : 'Light mode' }}</span>
+      </button>
     </div>
   </div>
 </nav>
+&nbsp;
 

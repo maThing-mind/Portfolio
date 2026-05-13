@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { loadPortfolio } from './store/portfolio.actions';
 import { PortfolioState } from './store/portfolio.reducer';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +18,15 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 export class AppComponent implements OnInit {
   portfolio$: Observable<PortfolioState>;
 
-  constructor(private store: Store<{ portfolio: PortfolioState }>) {
+  constructor(
+    private store: Store<{ portfolio: PortfolioState }>,
+    private themeService: ThemeService
+  ) {
     this.portfolio$ = this.store.select('portfolio');
   }
 
   ngOnInit() {
+    this.themeService.initTheme();
     this.store.dispatch(loadPortfolio());
   }
 }

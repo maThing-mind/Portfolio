@@ -1,5 +1,5 @@
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--hero-gradient);
   color: white;
   position: relative;
   overflow: hidden;
@@ -75,7 +75,7 @@
 
 .btn-outline-primary-custom:hover {
   background: white;
-  color: #667eea;
+  color: var(--hero-outline-hover);
   transform: translateY(-2px);
 }
 
@@ -100,7 +100,7 @@
 
 .social-link:hover {
   background: white;
-  color: #667eea;
+  color: var(--hero-social-hover);
   transform: translateY(-5px);
 }
 
@@ -164,7 +164,7 @@
 .shape {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--hero-shape);
   animation: float 6s ease-in-out infinite;
 }
 
@@ -230,13 +230,12 @@
   .hero-name {
     font-size: 2.5rem;
   }
-  
+
   .hero-title {
     font-size: 1.5rem;
   }
-  
+
   .profile-placeholder {
     font-size: 6rem;
   }
 }
-

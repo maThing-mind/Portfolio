@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { setActiveSection } from '../../store/portfolio.actions';
+import { ThemeMode, ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navigation',
@@ -13,11 +14,16 @@ import { setActiveSection } from '../../store/portfolio.actions';
 export class NavigationComponent implements OnInit {
   isScrolled = false;
   isMenuOpen = false;
+  currentTheme: ThemeMode = 'light';
 
-  constructor(private store: Store) {}
+  constructor(
+    private store: Store,
+    private themeService: ThemeService
+  ) {}
 
   ngOnInit() {
     this.onWindowScroll();
+    this.currentTheme = this.themeService.getTheme();
   }
 
   @HostListener('window:scroll', [])
@@ -36,6 +42,11 @@ export class NavigationComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
+    this.currentTheme = this.themeService.getTheme();
   }
 }
 

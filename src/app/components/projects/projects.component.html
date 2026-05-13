@@ -5,7 +5,13 @@
       <div class="col-lg-6 mb-4" *ngFor="let project of portfolio.projects; let i = index">
         <div class="project-card card-custom animate-scale-in" [style.animation-delay]="i * 0.2 + 's'">
           <div class="project-image">
-            <div class="project-icon">{{ project.image }}</div>
+            <img
+              class="project-photo"
+              [src]="project.imageUrl || project.image"
+              [alt]="project.imageAlt || project.title"
+              loading="lazy" />
+            <div class="project-image-overlay"></div>
+            <!-- <div class="project-image-label">Project Snapshot</div> -->
           </div>
           <div class="project-content">
             <h3 class="project-title">{{ project.title }}</h3>
@@ -27,4 +33,3 @@
     </div>
   </div>
 </section>
-

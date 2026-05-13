@@ -12,7 +12,7 @@ import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
+  // standalone: true,
   imports: [
     CommonModule,
     HeroComponent,

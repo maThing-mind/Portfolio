@@ -21,7 +21,7 @@ export const initialState: PortfolioState = {
     about: `I'm a self-learner who is passionately interested to learn and to implement what I've learned. I'm excited to hone my technical skills for the success of the organization and to enhance my knowledge to the current trends. Adaptable Software Engineer ready to support operations from conception through post-release support. Skilled creator of efficient code and exciting user experiences.`
   },
   skills: [
-    { name: 'Flutter', category: 'Mobile', icon: '📱' },
+   { name: 'Flutter', category: 'Mobile', icon: '📱' },
     { name: '.NET / ASP.NET Core', category: 'Backend', icon: '⚙️' },
     { name: 'PHP', category: 'Backend', icon: '🐘' },
     { name: 'Node.js & JavaScript', category: 'Full Stack', icon: '🟢' },
@@ -73,17 +73,60 @@ export const initialState: PortfolioState = {
   ],
   projects: [
     {
-      title: 'Cinematic App',
-      description: 'A comprehensive online streaming platform similar to Netflix, offering a wide range of movies and TV shows on-demand.',
+      title: 'Task Management Application',
+      description: 'A Jira-style task management platform for creating projects, planning sprints, tracking worklogs, and managing role-based access across teams.',
       features: [
-        'User authentication and personalized profiles',
-        'Content upload, sell, and buy functionality',
-        'Payment gateway integration for subscriptions and purchases',
-        'MongoDB database for data storage',
-        'Responsive front-end with React.js, HTML, CSS, and JavaScript'
+        'Project, task, and sprint creation with board-based workflow management',
+        'Worklog tracking to record daily progress and time spent on tasks',
+        'Employer permission management for specific access control and responsibilities',
+        'Responsive admin experience for managing delivery and collaboration'
       ],
-      technologies: ['Flutter', 'Node.js', 'MongoDB', 'Payment Gateway', 'JavaScript', 'jQuery'],
-      image: '🎬'
+      technologies: ['Angular', 'ASP.NET', 'MySQL', 'SSMS', 'Kendo UI'],
+      image: 'PM',
+      imageUrl: 'https://images.pexels.com/photos/6804091/pexels-photo-6804091.jpeg?cs=srgb&dl=pexels-cottonbro-6804091.jpg&fm=jpg',
+      imageAlt: 'Kanban-style project planning board with sticky notes'
+    },
+    {
+      title: 'Job Portal Application',
+      description: 'A blue-collar hiring platform where candidates can create profiles, browse jobs, and apply, while employers can publish openings and shortlist applicants.',
+      features: [
+        'Candidate and employer account creation with dedicated onboarding flows',
+        'Job search, application tracking, and candidate shortlisting',
+        'Employer-side posting and selection workflows for recruitment',
+        'Payment integration for premium or paid recruitment functionality'
+      ],
+      technologies: ['Angular', 'NgRx', 'Redux', '.NET Core', 'MySQL', 'SSMS', 'jQuery', 'Payment Integration'],
+      image: 'JP',
+      imageUrl: 'https://images.pexels.com/photos/8636626/pexels-photo-8636626.jpeg?cs=srgb&dl=pexels-kampus-8636626.jpg&fm=jpg',
+      imageAlt: 'Recruiters reviewing candidates during an online job interview'
+    },
+    {
+      title: 'Ecommerce Website',
+      description: 'A full ecommerce platform with separate admin and user portals for catalog management, inventory control, ordering, and customer purchases.',
+      features: [
+        'Admin modules for products, brands, categories, pricing, purchase orders, and inventory',
+        'User portal with product search, filtering, cart, and checkout-related flows',
+        'Address management for billing and shipping details',
+        'End-to-end catalog and order operations for day-to-day ecommerce management'
+      ],
+      technologies: ['Angular', 'NgRx', 'Redux', 'PHP', 'CodeIgniter', 'phpMyAdmin', 'XAMPP'],
+      image: 'EC',
+      imageUrl: 'https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?cs=srgb&dl=pexels-maorattias-5156696.jpg&fm=jpg',
+      imageAlt: 'Warehouse shelves representing ecommerce inventory and order operations'
+    },
+    {
+      title: 'Document Management System',
+      description: 'A secure organizational document platform with OneDrive-like functionality for storing, organizing, and controlling access to business files.',
+      features: [
+        'Upload and manage documents, photos, videos, and spreadsheet files',
+        'Folder-based organization for internal team collaboration',
+        'Granular security controls for specific files and folders',
+        'Enterprise-oriented access control for protected organizational content'
+      ],
+      technologies: ['Angular', 'NgRx', 'Redux', '.NET Core', 'CQRS', 'SSMS', 'MySQL'],
+      image: 'DM',
+      imageUrl: 'https://images.pexels.com/photos/8970653/pexels-photo-8970653.jpeg?cs=srgb&dl=pexels-leeloothefirst-8970653.jpg&fm=jpg',
+      imageAlt: 'Documents and laptop workspace representing secure file management'
     }
   ],
   activeSection: 'home',
@@ -114,4 +157,3 @@ export const portfolioReducer = createReducer(
     activeSection: section
   }))
 );
-
